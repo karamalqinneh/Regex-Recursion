@@ -5,12 +5,10 @@ function division(number, dividedBy) {
   let count = 0;
   function divisionSequence(number, dividedBy) {
     if (dividedBy == 0) {
-      console.log("i fail here");
       return 0;
     }
     if (number - dividedBy >= dividedBy || number - dividedBy == 0) {
       count += 1;
-      console.log("test", count);
       return divisionSequence(number - dividedBy, dividedBy);
     } else {
       return;
