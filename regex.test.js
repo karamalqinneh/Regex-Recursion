@@ -5,13 +5,12 @@ characters (no numbers and symbols) and it should end with capital A else return
 
 function capitalA(s) {
   // Add your logic.
-  let test1 = s.split(" ").filter((ele) => /[a-zA-Z]/g.test(ele));
-  let test2 = s.split(" ").filter((ele) => /\d/g.test(ele));
-  let test3 = s.split(" ")[s.split(" ").length - 1];
-  if (test1 != s.split(" ") || test2.length != 0 || !/A$/.test(test3)) {
-    return false;
-  } else {
+  let numericalTest = /\d/g.test(s);
+  let capitalTest = /A$/.test(s);
+  if (numericalTest == false && capitalTest == true) {
     return true;
+  } else {
+    return false;
   }
 }
 
